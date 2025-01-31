@@ -1,15 +1,9 @@
 package tests;
 
-import components.UserTableComponent;
 import org.junit.jupiter.api.Test;
 import pages.RegistrationPage;
 
-import static com.codeborne.selenide.Condition.appear;
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.*;
-
-public class PracticeFormTest extends BaseTest {
+public class RegistrationFormTest extends BaseTest {
 
     RegistrationPage registrationPage = new RegistrationPage();
 
