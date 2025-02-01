@@ -11,6 +11,7 @@ public class RegistrationFormTest extends BaseTest {
     void successfulFillingFormTest() {
 
         registrationPage.openPage()
+                .removeBanner()
                 .setName("Timur")
                 .setLastName("Vlasov")
                 .setUserEmail("test@email.com")

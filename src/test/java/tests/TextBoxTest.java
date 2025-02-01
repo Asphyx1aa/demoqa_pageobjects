@@ -10,6 +10,7 @@ public class TextBoxTest extends BaseTest {
     @Test
     void successfulFillingFormTest() {
         textBoxPage.openPage()
+                .removeBanner()
                 .setUserName("Timur Vlasov")
                 .setUserMail("test@gmail.com")
                 .setUserCurrentAddress("г. Барнаул, ул. Гоголя, д. 38")

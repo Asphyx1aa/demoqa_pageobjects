@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Selenide.executeJavaScript;
 
 public class TextBoxPage {
-    private SelenideElement userNameInput = $("#userName"),
+    private final SelenideElement userNameInput = $("#userName"),
             userMailInput = $("#userEmail"),
             userCurrentAddressInput = $("#currentAddress"),
             userPermamentAddressInput = $("#permanentAddress"),
@@ -18,6 +18,11 @@ public class TextBoxPage {
 
     public TextBoxPage openPage() {
         open("/text-box");
+
+        return this;
+    }
+
+    public TextBoxPage removeBanner() {
         executeJavaScript("$('#fixedban').remove()");
         executeJavaScript("$('footer').remove()");
 
